@@ -1,8 +1,5 @@
 class UsedBooksController < ApplicationController
-  require "nokogiri"
-  require "open-uri"
   require "uri"
-  require "net/http"
   require "mechanize"
 
   def index
