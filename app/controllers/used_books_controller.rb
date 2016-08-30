@@ -5,6 +5,10 @@ class UsedBooksController < ApplicationController
   def index
   end
 
+  def result
+    @results = get_used_books
+  end
+
   private
 
     # 매장 리스트
@@ -20,7 +24,7 @@ class UsedBooksController < ApplicationController
 
     def get_used_books
       # 찾고자 하는 책
-      target_book = params[:query].encode('euc-kr', 'utf-8') # EUC-KR 인코딩을 한 뒤에 쿼리
+      target_book = params[:q].encode('euc-kr', 'utf-8') # EUC-KR 인코딩을 한 뒤에 쿼리
       # 매장별 결과를 담을 해시
       result = {}
 
@@ -65,6 +69,6 @@ class UsedBooksController < ApplicationController
         end
         result[STORE_LISTS[store]] = book_list
       end
-      render json: result
+      result
     end
 end

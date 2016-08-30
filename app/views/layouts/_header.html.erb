@@ -1,0 +1,9 @@
+<div class="page-header clearfix">
+  <%= form_tag '/search', method: :get, class: 'navbar-form navbar-right' do %>
+    <div class="form-group">
+      <%= text_field_tag :q, '', class: 'form-control', placeholder: '중고책 검색' %>
+    </div>
+    <button class="btn btn-default">검색</button>
+  <% end %>
+  <h3 class="text-muted">헌책 헌터</h3>
+</div>
