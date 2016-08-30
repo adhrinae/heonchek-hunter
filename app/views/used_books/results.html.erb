@@ -1,0 +1,39 @@
+<div class="alert alert-success" role="alert">전체 <%= total_results %> 개의 검색 결과가 있습니다.</div>
+
+<% @results.each do |store, list| %>
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= store %>의 검색 결과: <%= list.size %>개</div>
+  <% if list.empty? %>
+  <div id="no_results" class="alert alert-warning" role="alert">검색 결과가 없습니다</div>
+  <% else %>
+  <table class="table table-striped">
+    <thead>
+      <th id="book_title">제목(부제)</th>
+      <th id="book_author">작가</th>
+      <th>출판사</th>
+      <th>출간일</th>
+      <th>최저가</th>
+      <th>재고</th>
+    </thead>
+    <tbody>
+      <% if list.empty? %>
+      <tr>
+        <td colspan="6">
+        </td>
+      </tr>
+      <% end %>
+      <% list.each do |book| %>
+      <tr>
+        <td><%= book[:title]+book[:sub_title] %></td>
+        <td><%= book[:author] %></td>
+        <td><%= book[:publisher] %></td>
+        <td><%= book[:pub_date] %></td>
+        <td><%= book[:price] %></td>
+        <td class="stock"><%= book[:stock] %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% end %>
+</div>
+<% end %>

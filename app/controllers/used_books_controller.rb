@@ -5,7 +5,7 @@ class UsedBooksController < ApplicationController
   def index
   end
 
-  def result
+  def results
     @results = get_used_books
   end
 

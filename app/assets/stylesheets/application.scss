@@ -21,3 +21,31 @@
 .jumbotron {
   text-align: center;
 }
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.panel-heading {
+  font-size: 1.3em;
+}
+
+#no_results {
+  margin-bottom: 0;
+}
+
+.table.table-striped {
+  #book_author {
+    max-width: 20%
+  }
+  #book_title {
+    max-width: 30%;
+  }
+  .stock {
+    font-size: medium;
+    font-weight: bold;
+    color: #19A41E;
+  }
+}
