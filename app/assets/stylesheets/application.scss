@@ -37,11 +37,20 @@
 }
 
 .table.table-striped {
-  #book_author {
-    max-width: 20%
-  }
   #book_title {
-    max-width: 30%;
+    width: 50%;
+  }
+  #book_author {
+    width: 15%
+  }
+  #book_publisher {
+    width: 10%;
+  }
+  #book_pub_date {
+    width: 10%;
+  }
+  #book_price {
+    width: 10%;
   }
   .stock {
     font-size: medium;
