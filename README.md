@@ -12,12 +12,12 @@
 
 * Configuration
 
-    bundle install
+        bundle install
 
 * Database initialization
 
-    rails db:create # 사실 DB는 전혀 쓰지 않는 어플리케이션입니다
-    rails db:migrate
+        rails db:create # 사실 DB는 전혀 쓰지 않는 어플리케이션입니다
+        rails db:migrate
 
 ---
 
